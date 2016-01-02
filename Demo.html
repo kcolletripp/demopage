@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- set background randomly -->
+<script>
+	var imgs = ["http://wallpapercave.com/wp/QGj5HZS.jpg", 
+	"https://wallpaperscraft.com/image/red_solid_light_bright_scarlet_65848_2048x1152.jpg"];
+	var numImg = Math.floor(Math.random()*2);
+	$(document).ready(function(){
+		$('body').css('background-image', 'url("'+imgs[numImg]+'")');
+	});
+</script>
+
+<!-- script for button -->
+<script>
+function buttonClick() {
+	$("#item4").show();
+	var x = Math.floor((Math.random() * 30) + 0);
+	var y = Math.floor((Math.random() * (30-x)) + 0);
+	var z = (30-(x+y))
+
+	var result1 = (x)
+	var result2 = (y)
+	var result3 = (z)
+
+	document.getElementById("item1").innerHTML = result1;
+	document.getElementById("item2").innerHTML = result2;
+	document.getElementById("item3").innerHTML = result3;
+}
+</script>
+
+<!-- import css style sheet -->
+<link rel="stylesheet" type="text/css" href="Demo.css">
+
+<div id=header>
+	<h1>Main title</h1>
+	<h4>Click "Trick or Treat!" to randomly pick 30 candies.</h4>
+</div>
+
+<button onclick="buttonClick()">Trick or Treat!</button>
+<p id="item1"></p>
+<p id="item2"></p>
+<p id="item3"></p>
+
+<div id="item1">
+<h2>Mars: </h2>
+</div>
+
+<div id="item2">
+<h2>Aero: </h2>
+</div>
+
+<div id="item3">
+<h2>Kit Kat: </h2>
+</div>
+
+<div id="item4">
+<h2>Thank you for trying it out</h2>
+</div>
+
+<!-- hide thank you at start -->
+<script>
+	$("#item4").hide();
+</script>
+
+</body>
+</html>
